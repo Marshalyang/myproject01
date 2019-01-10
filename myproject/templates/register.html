@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index_css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/register_css/register.css' %}"/>
+		<script src="{% static 'js/index_js/jquery-1.12.3.js' %}"></script>
+		<script src="{% static 'js/register.js/register.js' %}"></script>
+	</head>
+	<body>
+		<div id="top">
+			<div class="center">
+				<img src="{% static 'images/register_images/201511170959056304.png'%}" class="img1">
+				<img src="{% static 'images/register_images/jifen.png'%}" class="img2">
+			</div>
+		</div>
+		<div id="pgty">
+			<div class="center">
+				<form>
+					<ul>
+						<li><a href="#">会员登录</a></li>
+						<li><a href=" login.html">会员注册</a></li>
+					</ul>
+					<div class="form_center">
+						<div id="txt">
+							<input type="text" placeholder="手机号/用户名/邮箱"><br>
+							<i>您必须提供一个用户名</i>
+							<img src="{% static 'images/register_images/icon_03.png'%}">
+						</div>
+						<div id="psd">
+							<input type="password" placeholder="密码"><br>
+							<i>您必须提供一个密码</i>
+							<img src="{% static 'images/register_images/icon_07.png'%}">
+						</div>
+						<p><a href="#">忘记密码</a></p>
+						<input type="button" value="登录" class="sub"><br>
+						<h4>合作网站账号登录</h4>
+						<a href="#"><img src="{% static 'images/register_images/icon_11.png'%}"></a>
+						<a href="#"><img src="{% static 'images/register_images/icon_13.png'%}"></a>
+						<a href="#"><img src="{% static 'images/register_images/icon_15.png'%}"></a>
+						<a href="#"><img src="{% static 'images/register_images/icon_17.png'%}"></a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="foot">
+			<div class="center">
+				<div id="footer">
+					<p>©2005-2015 七加二驴友商城 版权所有，并保留所有权利。天津市华苑产业园区鑫茂民营科技园C2座6层AB单元</p>
+					<p>Tel: 022-23857290-8031 QQ: 191391765</p>
+					<p>ICP备案证书号:津ICP备14004534号-1</p>
+				</div>
+			</div>
+		</div>
+		<div id="fxdc">
+			<div class="fxdc_left">
+				<ul>
+				<li><a href="index.html"><img src="{% static 'images/register_images/wechat-pic.png'%}">
+				<dl>
+					<dt>七加二商城</dt>
+					<dt>APP下载</dt>
+					<dd>注册送5元</dd>
+				</dl></a></li>
+				<li><a href="index.html"><img src="{% static 'images/register_images/wechat-pic.png'%}">
+				<dl>
+					<dt>七加二</dt>
+					<dt>官方微信</dt>
+					<dd>lvtuan_net</dd>
+				</dl></a></li>
+			</ul>
+			</div>
+			<div class="fxdc_right">
+				<img src="{% static 'images/register_images/icon_24.png'%}">
+			</div>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+.center{
+	width: 1210px;
+	margin: 0 auto;
+}
+/*register*/
+#register li a:hover{
+	background: #f5f5f5;
+}
+#register ul .kuan{
+	border-left:solid 1px #838383 ;
+	height: 16px;
+	margin-top: 10px;
+}
+#register ul .kuan a{
+	line-height: 0;
+}
+#register #list2 .kuan {
+	line-height: 14px;
+}
+#register #list2 li{
+	line-height: 36px;
+}
+#register #list2 .qq{
+	margin-top: 8px;
+	width: 70px;
+	height: 20px;
+	background: url(../../images/mycat_images/bg.png) no-repeat 0 -42px;
+}
+#register #list2 .weibo{
+	margin-top: 8px;
+	width: 83px;
+	height: 20px;
+	background: url(../../images/mycat_images/bg.png) no-repeat -72px -42px;
+}
+
+/**/
+#logo{
+	height: 85px;
+	padding-top:25px ;
+	background: #fafafa;
+}
+.logo_center{
+	
+	float: right;
+}
+
+/**/
+#mycat {
+	overflow: hidden;
+	background: #fafafa;
+}
+#mycat h3{
+	line-height: 45px;
+}
+
+#mycat_t ,#mycat_b{
+	border: solid 1px #d5d5d4;
+	background: #f3f3f3;
+	overflow: hidden;
+}
+#mycat_t li,#mycat_b li{
+	padding: 0 80px;
+	line-height: 45px;
+}
+
+#mycat_c{
+	background: #fff;
+	margin: 50px 0;
+	overflow: hidden;
+	border: solid 1px #d5d5d4;
+	padding: 15px 25px;
+}
+#mycat_c li{
+	overflow: hidden;
+	border-bottom: dotted 1px #616161;
+	padding: 10px;
+}
+
+#mycat_c li{
+	position: relative;
+	padding-left: 20px;
+}
+#mycat_c  #ipt{
+	position: absolute;
+	top: 35px;
+	left: 2px;
+}
+#boom1,#mycat_c img,#boom2,#boom3,#ipt1,#ipt3,#ipt2{
+	float: left;
+}
+#boom1{
+	width: 200px;
+	display: block;
+	margin: 0 40px;
+}
+#boom2{
+	margin-left: 38px;
+	margin-right: 106px;
+	display: block;
+	width: 100px;
+}
+#boom3{
+	color: orange;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 92px;
+	margin-right: 120px;
+	display: block;
+	width:100px;
+}
+#ipt1,#ipt3{
+	width: 15px;
+	height: 20px;
+}
+#ipt2{
+	width: 30px;
+	height: 20px;
+}
+
+ a{
+	color: #616161;
+}
+ a:hover{
+	color: #90C320;
+}
+#mycat_b #boom9 span{
+	color: orange;
+	font-size:20px ;
+	font-weight: 800;
+}
+#mycat_b #boom10{
+	float: right;
+	font-size: 20px;
+	background: orange;
+}
+#mycat_b #boom10 a{
+	color: #fff;
+}
+#mycat_f{
+	margin-top:70px ;
+	margin-bottom: 20px;
+}

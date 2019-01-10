@@ -1,0 +1,1080 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index_css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index_css/index.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/detail_css/detail.css' %}"/>
+		<script src="{% static 'js/index_js/jquery-1.12.3.js' %}"></script>
+		<script src="{% static 'js/index_js/jquery.cookie.js' %}"></script>
+		<script src="{% static 'js/dtl.js' %}"></script>
+		<script src="{% static 'js/index_js/move3.js' %}"></script>
+		<script src="{% static 'js/index_js/ajax.js' %}"></script>
+		<script src="{% static 'js/detail.js/detail.js' %}"></script>
+	</head>
+	<body>
+		<div id="top">
+			<div id="register">
+				<div class="center">
+					<ul id="list1">
+						<li><a href="register.html">登录</a></li>
+						<li><a href="login.html">注册</a></li>
+					</ul>
+					<ul id="list2">
+						<li class="da"><a style="padding-left: 20px;" href="#">我的七加二<span><img src="{% static 'images/index_images/register/down-arrow.png'%}"></span></a>
+							<ul style="padding-left: 20px;">
+								<li><a href="#">我的订单<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+								<li><a href="#">我的咨询<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+								<li><a href="#">我的优惠卷<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+								<li><a href="#">我是卖家<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+							</ul>
+						</li>
+						<li><a href="mycat.html"><span><img class="ol" src="{% static 'images/index_images/register/cart.png'%}"></span>购物车  <i id="sum">0</i></a></li>
+						<li class="da"><a href="#"><span><img class="ol" src="{% static 'images/index_images/register/star.png'%}"></span>收藏夹<span><img src="{% static 'images/index_images/register/down-arrow.png'%}"></span></a>
+							<ul id="list3">
+								<li><a href="#">收藏宝贝<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+								<li><a href="#">收藏店铺<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+
+							</ul>
+						</li>
+						<li class="da"><a href="#"><span><img class="ol" src="{% static 'images/index_images/register/me.png'%}"></span>联系客服<span><img src="{% static 'images/index_images/register/down-arrow.png'%}"></span></a>
+							<ul id="list4">
+								<li><a href="#">在线咨询<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+								<li><a href="#">售后服务1<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+								<li><a href="#">售后服务2<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+								<li><a href="#">帮助中心<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+			<div id="logo">
+				<div class="center">
+					<div class="logo_left">
+						<a href="index.html"><img src="{% static 'images/detail_images/201511170959056304.png'%}"></a>
+					</div>
+					<div class="logo_center" id="lct">
+						<div class="triangle"></div>
+						<img src="{% static 'images/index_images/logo/search.png'%}">
+						<form>
+							<input type="text" class="ipt1">
+							<input type="submit" value="搜索" class="ipt2">
+
+						</form>
+						<p>热门搜索：<a href="#">徒步</a><a href="#">维修</a>
+							<a href="#">yes好货</a><a href="#">登山鞋</a>
+							<a href="#">睡袋</a><a href="#">拉杆箱</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="nav">
+			<div class="center">
+				<div class="nav_left" id="nav_ob">
+					<span><img src="{% static 'images/detail_images/navlist_bg.png'%}"></span>
+					全部商品分类
+					<span><img src="{% static 'images/detail_images/arr_down.png'%}"></span>
+					<img src="{% static 'images/detail_images/nav-arrowbg.png'%}" class="arrow">
+					<div class="lunbo_left" id="nav_db">
+						<ul id="so">
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_06.png'%}" title="男装">男装</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" style="display: none;">
+									<dl>
+										<dt><a href="#">冲锋衣裤</a></dt>
+										<dd><a href="#">三合一</a>|<a href="#">单冲</a>|<a href="#">冲锋裤</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#"> 抓绒 |软壳</a></dt>
+										<dd><a href="#">抓绒 |软壳上衣</a>|<a href="#">抓绒 |软壳裤</a>|<a href="#">抓绒马甲</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">保暖服装</a></dt>
+										<dd><a href="#">羽绒衣裤</a>|<a href="#">羽绒马甲</a>|<a href="#">棉衣裤</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">内衣裤 </a></dt>
+										<dd><a href="#">内衣</a>|<a href="#">内裤</a>|<a href="#">套装 </a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">户外休闲</a></dt>
+										<dd><a href="#">卫衣</a>|<a href="#">毛衣</a>|<a href="#">皮肤风衣</a>|
+											<a href="#">摄影背心</a>|<a href="#">休闲上衣</a>|<a href="#">休闲裤</a>|
+											<a href="#">休闲短裤</a>|<a href="#">休闲衬衫</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">滑雪 | 水上  </a></dt>
+										<dd><a href="#">双板滑雪服</a>|<a href="#">单板滑雪服</a>|<a href="#">滑雪裤 </a>|<a href="#">水上运动服装</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">骑行 | 攀岩</a></dt>
+										<dd><a href="#">骑行服装</a>|<a href="#">骑马服装</a>|<a href="#">攀岩服装 </a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">跑步 | 铁三  </a></dt>
+										<dd><a href="#">压缩衣</a>|<a href="#">铁人三项服装</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">T恤 </a></dt>
+										<dd><a href="#">速干T恤</a>|<a href="#">棉T恤 </a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">速干衣裤</a></dt>
+										<dd><a href="#">速干衣</a>|<a href="#">速干长裤</a>|<a href="#">速干短裤</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">服饰配件</a></dt>
+										<dd><a href="#">帽子</a>|<a href="#">头巾</a>|<a href="#">手套</a>|
+											<a href="#">围巾</a>|<a href="#">腰带</a>|<a href="#">护脸 | 护耳 | 口罩 </a>
+										</dd>
+									</dl>
+									<dl class="li_bottom">
+										<dt><a href="#">品牌</a></dt>
+										<dd><a href="#">8264</a>|<a href="#">TOREAD （探路者）</a>|<a href="#">TTISS(铁仕)</a>|
+											<a href="#">ARC'TERYX（始祖鸟）</a>|<a href="#">Mobigarden（牧高笛）</a>|<a href="#">Trackman（自游人）</a>|
+											<a href="#">PURELAND（普尔兰德）</a>|<a href="#">Kailas（凯乐石）</a>|<a href="#">ACTIONFOX（快乐狐狸）</a>|
+											<a href="#">BLACK YAK（布来亚克）</a>|<a href="#">BUFF</a>|<a href="#">CARAVA（喀尔沃）</a>|<a style="color: #90a221;" href="#">更多 〉</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_09.png'%}" title="女装 ｜ 童装">女装 ｜ 童装</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" id="li_none1">
+									<dl>
+										<dt><a href="#">冲锋衣裤</a></dt>
+										<dd><a href="#">三合一</a>|<a href="#">单冲</a>|<a href="#">冲锋裤</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#"> 抓绒 |软壳</a></dt>
+										<dd><a href="#">抓绒 |软壳上衣</a>|<a href="#">抓绒 |软壳裤</a>|<a href="#">抓绒马甲</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">保暖服装</a></dt>
+										<dd><a href="#">羽绒衣裤</a>|<a href="#">羽绒马甲</a>|<a href="#">棉衣裤</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">内衣裤 </a></dt>
+										<dd><a href="#">内衣</a>|<a href="#">内裤</a>|<a href="#">套装 </a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">休闲服装</a></dt>
+										<dd><a href="#">皮肤风衣</a><a href="#">卫衣</a>|<a href="#">毛衣</a>|
+											<a href="#">摄影背心</a>|<a href="#">休闲上衣</a>|<a href="#">休闲裤</a>|
+											<a href="#">休闲短裤</a>|<a href="#">休闲衬衫</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">滑雪 | 水上  </a></dt>
+										<dd><a href="#">双板滑雪服</a>|<a href="#">单板滑雪服</a>|<a href="#">滑雪裤 </a>|<a href="#">跑步健身服</a>|<a href="#">水上运动服装</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">骑行 | 攀岩</a></dt>
+										<dd><a href="#">骑行服装</a>|<a href="#">骑马服装</a>|<a href="#">攀岩服装 </a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">跑步 | 铁三  </a></dt>
+										<dd><a href="#">压缩衣</a>|<a href="#">铁人三项服装</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">T恤 </a></dt>
+										<dd><a href="#">速干T恤</a>|<a href="#">棉T恤 </a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">速干衣裤</a></dt>
+										<dd><a href="#">速干衣</a>|<a href="#">速干长裤</a>|<a href="#">速干短裤</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">服饰配件</a></dt>
+										<dd><a href="#">帽子</a>|<a href="#">头巾</a>|<a href="#">手套</a>|
+											<a href="#">围巾</a>|<a href="#">腰带</a>|<a href="#">护脸 | 护耳 | 口罩 </a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">户外童装 </a></dt>
+										<dd><a href="#">户外童装</a>|<a href="#">双板滑雪服</a>|<a href="#">单板滑雪服 </a></dd>
+									</dl>
+									<dl class="li_bottom">
+										<dt><a href="#">品牌</a></dt>
+										<dd><a href="#">8264</a>|<a href="#">TOREAD （探路者）</a>|<a href="#">TTISS(铁仕)</a>|
+											<a href="#">ARC'TERYX（始祖鸟）</a>|<a href="#">Mobigarden（牧高笛）</a>|<a href="#">Trackman（自游人）</a>|
+											<a href="#">PURELAND（普尔兰德）</a>|<a href="#">Kailas（凯乐石）</a>|<a href="#">ACTIONFOX（快乐狐狸）</a>|
+											<a href="#">BLACK YAK（布来亚克）</a>|<a href="#">BUFF</a>|<a href="#">CARAVA（喀尔沃）</a>|
+											<a href="#">HIGHROCK（天石）</a>|<a style="color: #90a221;" href="#">更多 〉</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_13.png'%}" title="鞋袜">鞋袜</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" id="li_none2">
+									<dl>
+										<dt><a href="#">登山鞋</a></dt>
+										<dd><a href="#">高帮登山鞋</a>|<a href="#">低帮登山鞋</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">高山靴</a></dt>
+										<dd><a href="#">高山靴</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">保暖靴  </a></dt>
+										<dd><a href="#">雪地鞋</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">专项运动鞋</a></dt>
+										<dd><a href="#">越野跑鞋</a>|<a href="#">攀岩鞋</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">凉鞋 | 溯溪  </a></dt>
+										<dd><a href="#">溯溪鞋</a><a href="#">沙滩鞋</a>|<a href="#">凉拖</a>|
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">休闲户外鞋   </a></dt>
+										<dd><a href="#">徒步鞋</a>|<a href="#">休闲鞋</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">袜子  </a></dt>
+										<dd><a href="#">棉袜 | 羊毛袜</a>|<a href="#">排汗袜</a>|
+											<a href="#">运动袜</a>|<a href="#">滑雪袜</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">辅配件 </a></dt>
+										<dd><a href="#">鞋带 | 鞋垫</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">雪鞋  </a></dt>
+										<dd><a href="#">双板雪鞋</a>|<a href="#">单板雪鞋</a></dd>
+									</dl>
+									<dl class="li_bottom">
+										<dt><a href="#">品牌</a></dt>
+										<dd><a href="#">8264</a>|<a href="#">TOREAD （探路者）</a>|<a href="#">TTISS(铁仕)</a>|
+											<a href="#">HiNature （罕步）</a>|<a href="#">Mobigarden（牧高笛）</a>|<a href="#">Trackman（自游人）</a>|
+											<a href="#">PURELAND（普尔兰德）</a>|<a href="#">Kailas（凯乐石）</a>|<a href="#">ACTIONFOX（快乐狐狸）</a>|
+											<a href="#">BLACK YAK（布来亚克）</a>|<a href="#">BUFF</a>|<a href="#">CARAVA（喀尔沃）</a>|
+											<a href="#">LOWA</a>|<a style="color: #90a221;" href="#">更多 〉</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_15.png'%}" title="背包 ｜ 袋类">背包 ｜ 袋类</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" style="display: none;">
+									<dl>
+										<dt><a href="#">双肩包</a></dt>
+										<dd><a href="#">大型背包（50L以上）</a>|<a href="#">中型背包（30-50L）</a>|<a href="#">小型背包（30L以下）</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">功能包 | 小</a></dt>
+										<dd><a href="#">包野餐包</a>|<a href="#">烧烤包</a>|<a href="#">腰包 | 小包 | 挎包</a>|
+										<a href="#">骑行包 | 驮包</a>|<a href="#">拉杆包 | 箱</a>|<a href="#">相机包</a>|
+										<a href="#">洗漱包</a>|<a href="#">滑板包</a>|<a href="#">雪鞋包</a></dd>
+									</dl>
+									<dl>
+										<dt><a href="#">其他</a></dt>
+										<dd><a href="#">收纳袋</a>|<a href="#">防水袋</a>|<a href="#">冰袋</a>|
+										<a href="#">背包防雨罩</a>|<a href="#">捆绑绳 | 辅配件</a></dd>
+									</dl>
+									<dl class="li_bottom">
+										<dt><a href="#">品牌</a></dt>
+										<dd><a href="#">TOREAD （探路者）</a>|<a href="#">LOWA|ARC'TERYX（始祖鸟）</a>|
+											<a href="#">GREGORY（格里高利）</a>|<a href="#">Mobigarden（牧高笛）</a>|<a href="#">Trackman（自游人）</a>|
+											<a href="#">Granite Gear（花岗岩）</a>|<a href="#">|Acome（ACME阿珂姆）</a>|<a href="#">ACTIONFOX（快乐狐狸）</a>|
+											<a href="#">CAMELBAK（驼峰）</a>|<a style="color: #90a221;" href="#">更多 〉</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_17.png'%}" title="露营旅行">露营旅行</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" id="li_none3">
+									<dl>
+										<dt><a href="#">帐篷</a></dt>
+										<dd>
+											<a href="#">高山帐篷</a>
+											|<a href="#">野营帐篷</a>
+											|<a href="#">沙滩 | 休闲帐篷</a>
+											|<a href="#">凉棚 | 帐篷辅件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">睡袋</a></dt>
+											<dd>
+												<a href="#">羽绒睡袋</a>
+												|<a href="#">棉质睡袋</a>
+												|<a href="#">抓绒睡袋</a>
+												|<a href="#">睡袋压缩袋</a>
+												|<a href="#">辅配件</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt><a href="#">垫子 | 床椅</a></dt>
+											<dd>
+												<a href="#">吊床</a>
+												|<a href="#">地垫 | 地席</a>
+												|<a href="#">防潮垫</a>
+												|<a href="#">充气垫 | 气枕</a>
+												|<a href="#">折叠椅 | 折叠床</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt><a href="#">手杖</a></dt>
+											<dd>
+												<a href="#">登山杖</a>
+												|<a href="#">旅行杖</a>
+												|<a href="#">辅配件</a>
+											</dd>
+										</dl>
+											<dl>
+											<dt><a href="#">照明</a></dt>
+											<dd>
+												<a href="#">头灯</a>
+												|<a href="#">手电</a>
+												|<a href="#">营地灯 | 汽灯</a>
+												|<a href="#">油灯</a>
+												|<a href="#">电池 | 燃料</a>
+												|<a href="#">照明配件</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt><a href="#">炉具 | 餐具</a></dt>
+											<dd>
+												<a href="#">气炉 | 喷枪 | 油炉</a>
+												|<a href="#">烧烤架</a>
+												|<a href="#">套锅</a>
+												|<a href="#">餐具</a>
+												|<a href="#">辅配件</a>
+												|<a href="#">电池 | 燃料</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt><a href="#">水具</a></dt>
+											<dd>
+												<a href="#">水袋 | 水瓶</a>
+												|<a href="#">水桶 | 水盆</a>
+												|<a href="#">净水器</a>
+												|<a href="#">辅配件</a>
+												|<a href="#">保温水壶</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt><a href="#">旅行其他</a></dt>
+											<dd>
+												<a href="#">直柄伞 | 折叠伞 | 迷你伞</a>
+												|<a href="#">其他</a>
+											</dd>
+										</dl>
+										<dl>
+											<dt><a href="#">渔具</a></dt>
+											<dd>
+												<a href="#">鱼竿</a>
+												|<a href="#">渔具配件</a>
+											</dd>
+										</dl>
+										<dl class="li_bottom">
+											<dt><a href="#">品牌</a></dt>
+											<dd>
+												<a href="#">8264</a>|
+												<a href="#">Mobigarden（牧高笛）</a>|
+												<a href="#">Trackman（自游人）</a>|
+												<a href="#">PURELAND（普尔兰德）</a>|
+												<a href="#">Acome（ACME阿珂姆）</a>|
+												<a href="#">Kailas（凯乐石）</a>|
+												<a href="#">BULIN（步林）</a>|
+												<a href="#">BLACK DIAMOND（黑钻）</a>|
+												<a href="#">CAMELBAK（驼峰）</a>|
+												<a href="#">Coleman（高门）</a>|
+												<a href="#">DOITE（多伊特）</a>|
+												<a href="#">Dowell（多为）</a>|
+												<a href="#" style="color: #90a221;">更多 〉</a>
+											</dd>
+										</dl>
+								</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_20.png'%}" title="登山 ｜ 攀岩 ｜ 铁人三项">登山 ｜ 攀岩 ｜ 铁人三项</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" id="li_none4">
+
+									<dl>
+										<dt><a href="#">攀登器材</a></dt>
+										<dd>
+											<a href="#">主锁 | 快挂 | 连接器</a>
+												|<a href="#">保护器 | 制动器 | 滑轮</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">冰雪器材</a></dt>
+										<dd>
+											<a href="#">冰镐 | 冰锥</a>
+											|<a href="#">冰爪 | 冰钩</a>
+											|<a href="#">雪铲</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">安全</a></dt>
+										<dd>
+											<a href="#">安全带</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">绳索 | 扁带</a></dt>
+										<dd>
+											<a href="#">静力绳 | 动力绳 | 辅绳</a>
+											|<a href="#">扁带</a>
+																															</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">辅件</a></dt>
+										<dd>
+											<a href="#">支点 | 指力板 | 岩板</a>
+												|<a href="#">粉袋</a>
+												|<a href="#">攀登辅件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">铁人三项</a></dt>
+										<dd>
+											<a href="#">铁三训练装备</a>
+										</dd>
+									</dl>
+									<dl class="li_bottom">
+										<dt><a href="#">品牌</a></dt>
+										<dd><a href="#">Kailas（凯乐石）</a>|
+											<a href="#">k2summit（凯图）</a>|
+											<a href="#">SALEWA（沙乐华）</a>|
+											<a href="#">BRS（兄弟）</a>|
+											<a href="#">NatureHike</a>|
+											<a href="#">LEIXE（雷蝎）</a>|
+											<a href="#">WindTour（威迪瑞）</a>|
+											<a href="#">ROCKWAY岩途</a>|
+											<a href="#">Pelliot伯希和</a>|
+											<a href="#">BLUCORE</a>|
+											<a href="#">FINIS</a>|
+											<a href="#">SURGING</a>|
+											<a href="#" style="color: #90a221;">更多 〉</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_23.png'%}" title="滑雪 ｜ 板 ｜ 器械">滑雪 ｜ 板 ｜ 器械</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" id="li_none5">
+									<dl>
+										<dt><a href="#" title="滑雪板">滑雪板</a></dt>
+										<dd>
+										<a href="#" title="单板">单板</a>
+										|<a href="#" title="双板">双板</a>																				</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="固定器">固定器</a></dt>
+										<dd>
+											<a href="#" title="双板固定器">双板固定器</a>
+											<a href="#" title="单板固定器">单板固定器</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="套装">套装</a></dt>
+										<dd>
+											<a href="#" title="双板套装">双板套装</a>
+											|<a href="#" title="单板套装">单板套装</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="雪杖">雪杖</a></dt>
+										<dd>
+											<a href="#" title="雪杖">雪杖</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="其他配件">其他配件</a></dt>
+										<dd>
+											<a href="#" title="防滑垫">防滑垫</a>
+											|<a href="#" title="板贴">板贴</a>
+											|<a href="#" title="发热贴">发热贴</a>
+											|<a href="#" title="配件">配件</a>
+										</dd>
+									</dl>
+									<dl class="li_bottom&quot;">
+											<dt><a href="#">品牌</a></dt><a href="#">
+											</a><dd><a href="#">
+												</a><a href="#" title="SALEWA（沙乐华）">SALEWA（沙乐华）</a>|
+												<a href="#" title="YAWARA">YAWARA</a>|
+												<a href="#" title="Emotion">Emotion</a>|
+												<a href="#" title="Bateau（百途）">Bateau（百途）</a>|
+												<a href="#" title="Boreal design">Boreal design</a>|
+												<a href="#" title="ARMADA">ARMADA</a>|
+												<a href="#" title="NORDICA诺迪卡">NORDICA诺迪卡</a>|
+												<a href="#" title="FISCHER菲舍尔">FISCHER菲舍尔</a>|
+												<a href="#" title="HEAD">HEAD</a>|
+												<a href="#" title="SWIX">SWIX</a>|
+												<a href="#" style="color: #90a221;">更多 〉</a>
+											</dd>
+										</dl>
+									</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_26.png'%}" title="工具 ｜ 仪器 ｜ 眼镜">工具 ｜ 仪器 ｜ 眼镜</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" id="li_none6">
+									<dl>
+										<dt><a href="#" title="数码 | 工具">数码 | 工具</a></dt>
+										<dd>
+											<a href="#" title="刀具 | 多用工具">刀具 | 多用工具</a>
+											|<a href="#" title="打火机">打火机</a>
+											|<a href="#" title="户外手机">户外手机</a>
+											|<a href="#" title="对讲机">对讲机</a>
+											|<a href="#" title="数码产品">数码产品</a>
+											|<a href="#" title="救生哨">救生哨</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="仪器">仪器</a></dt>
+										<dd>
+											<a href="#" title="指南针 | 高度计 | 坡度计">指南针 | 高度计 | 坡度计</a>
+											|<a href="#" title="手表">手表</a>
+											|<a href="#" title="GPS">GPS</a>
+											|<a href="#" title="计步器">计步器</a>
+											|<a href="#" title="体温计 | 体重计">体温计 | 体重计</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="眼镜">眼镜</a></dt>
+										<dd>
+											<a href="#" title="望远镜">望远镜</a>
+												|<a href="#" title="太阳镜片 | 夹片">太阳镜片 | 夹片</a>
+												|<a href="#" title="滑雪 | 防护镜">滑雪 | 防护镜</a>
+												|<a href="#" title="游泳 | 潜水镜">游泳 | 潜水镜</a>
+										</dd>
+									</dl>
+									<dl class="li_bottom">
+										<dt><a href="#">品牌</a></dt>
+										<dd>
+											<a href="#" title="8264">8264</a>|
+											<a href="#" title="Trackman（自游人）">Trackman（自游人）</a>|
+											<a href="#" title="Garmin">Garmin</a>|
+											<a href="#" title="k2summit（凯图）">k2summit（凯图）</a>|
+											<a href="#" title="UVEX （伟斯文特）">UVEX （伟斯文特）</a>|
+											<a href="#" title="OMRON（欧姆龙）">OMRON（欧姆龙）</a>|
+											<a href="#" title="Farrova（法洛華）">Farrova（法洛華）</a>|
+											<a href="#" title="RUBY SPORTS（超敢动）">RUBY SPORTS（超敢动）</a>|
+											<a href="#" title="BOLLE（葆旎）">BOLLE（葆旎）</a>|
+											<a href="#" title="Celestron（星特朗）">Celestron（星特朗）</a>|
+											<a href="#" title="Ten Thirty（十点半）">Ten Thirty（十点半）</a>|
+											<a href="#" title="SPORTSTAR（仕博达）">SPORTSTAR（仕博达）</a>|
+											<a href="#" style="color: #90a221;">更多 〉</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_29.png'%}" title="自行车 ｜ 跑步 ｜ 游泳">自行车 ｜ 跑步 ｜ 游泳</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" id="li_none7">
+									<dl>
+										<dt><a href="#" title="自行车">自行车</a></dt>
+										<dd>
+											<a href="#" title="山地自行车">山地自行车</a>
+											|<a href="#" title="折叠自行车 | 拖车">折叠自行车 | 拖车</a>
+											|<a href="#" title="自行车组件">自行车组件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="游泳">游泳</a></dt>
+										<dd>
+											<a href="#" title="游泳配件">游泳配件</a>
+										</dd>
+									</dl>
+									<dl class="li_bottom">
+										<dt><a href="#"></a>品牌</dt>
+										<dd>
+											<a href="#" title="Garmin">Garmin</a>|
+											<a href="#" title="BETO">BETO</a>|
+											<a href="#" title="OYBEI">OYBEI</a>|
+											<a href="#" title="PIGEON飞鸽">PIGEON飞鸽</a>|
+											<a href="#" title="BLUCORE">BLUCORE</a>|
+											<a href="#" title="FINIS">FINIS</a>|
+											<a href="# " title="Rocket Science Sports">Rocket Science Sports</a>|
+											<a href="#" title="SPEEDO">SPEEDO</a>|
+											<a href="#" title="SURGING">SURGING</a>|
+											<a href="#" title="TYR">TYR</a>|
+											<a href="#" title="SWIME">SWIME</a>|
+											<a href="#" title="Dive Sail">Dive Sail</a>|
+											<a href="#" style="color: #90a221;">更多 〉</a>
+										</dd>
+									</dl>
+									</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_32.png'%}" title="护具｜ 头盔 ｜书籍">护具｜ 头盔 ｜书籍</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" id="li_none8">
+									<dl>
+										<dt><a href="#" title="护具">护具</a></dt>
+										<dd>
+											<a href="#" title="护臀">护臀</a>
+											|<a href="#" title="护膝">护膝</a>
+											|<a href="#" title="护甲">护甲</a>
+											|<a href="#" title="护肘">护肘</a>
+											|<a href="#" title="护腕">护腕</a>
+											|<a href="#" title="护腿">护腿</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="头盔">头盔</a></dt>
+										<dd>
+											<a href="#" title="攀岩头盔">攀岩头盔</a>
+											|<a href="#" title="骑行头盔">骑行头盔</a>
+											|<a href="#" title="滑雪头盔">滑雪头盔</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="书籍 | 影像">书籍 | 影像</a></dt>
+										<dd>
+											<a href="#" title="书籍 | 音像制品">书籍 | 音像制品</a>
+											|<a href="#" title="旅行指南 | 期刊 | 地图">旅行指南 | 期刊 | 地图</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="防护品">防护品</a></dt>
+										<dd>
+											<a href="#" title="急救用品">急救用品</a>
+											|<a href="#" title="消毒杀菌">消毒杀菌</a>
+											|<a href="#" title="驱避剂">驱避剂</a>
+											|<a href="#" title="其他">其他</a>
+																															</dd>
+									</dl>
+									<dl>
+										<dt><a href="#" title="其他">其他</a></dt>
+										<dd>
+											<a href="#" title="方便用品">方便用品</a>
+											|<a href="#" title="高能用品">高能用品</a>
+										</dd>
+									</dl>
+									<dl class="li_bottom">
+										<dt><a href="#"></a>品牌</dt>
+										<dd>
+											<a href="#" title="Acome（ACME阿珂姆）">Acome（ACME阿珂姆）</a>|
+											<a href="#" title="Zealwood（赛乐）">Zealwood（赛乐）</a>|
+											<a href="#" title="UVEX （伟斯文特）">UVEX （伟斯文特）</a>|
+											<a href="#" title="SALEWA（沙乐华）">SALEWA（沙乐华）</a>|
+											<a href="#" title="MAKINO（犸凯奴）">MAKINO（犸凯奴）</a>|
+											<a href="#" title="UTO(悠途)">UTO(悠途)</a>|
+											<a href="#" title="NatureHike">NatureHike</a>|
+											<a href="#" title="江苏鱼跃">江苏鱼跃</a>|
+											<a href="#" title="红景天">红景天</a>|
+											<a href="#" title="LEIXE（雷蝎）">LEIXE（雷蝎）</a>|
+											<a href="#" title="LIFEFREES（乐飞思）">LIFEFREES（乐飞思）</a>|
+											<a href="#" title="WindTour（威迪瑞）">WindTour（威迪瑞）</a>|
+											<a href="#" style="color: #90a221;">更多 〉</a>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_35.png'%}" title="品牌">品牌</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span>
+								<i></i>
+								<div class="li_none" id="li_none9">
+									<dl class="li_bottom" style="border-top:none; padding-top: 10px;">
+									<dt><a href="#"></a>品牌</dt>
+									<dd>
+										<a href="#" title="ARC'TERYX（始祖鸟）">ARC'TERYX（始祖鸟）</a>|
+										<a href="#" title="LOWA">LOWA</a>|
+										<a href="#" title="GREGORY（格里高利）">GREGORY（格里高利）</a>|
+										<a href="#" title="Mobigarden（牧高笛）">Mobigarden（牧高笛）</a>|
+										<a href="#" title="SALOMON（萨洛蒙）">SALOMON（萨洛蒙）</a>|
+										<a href="#" title="NORTHLAND（诺诗兰）">NORTHLAND（诺诗兰）</a>|
+										<a href="#" title="Patagonia(巴塔哥尼亚)">Patagonia(巴塔哥尼亚)</a>|
+										<a href="#" title="Mammut（猛马象）">Mammut（猛马象）</a>|
+										<a href="#" title="VAUDE（沃德）">VAUDE（沃德）</a>|
+										<a href="#" title="Kailas（凯乐石）">Kailas（凯乐石）</a>|
+										<a href="#" title="CLORTS（洛弛）">CLORTS（洛弛）</a>|
+										<a href="#" title="Sea To Summit">Sea To Summit</a>|
+										<a href="#" title="SUUNTO 松拓">SUUNTO 松拓</a>|
+										<a href="#" title="ACTIONFOX（快乐狐狸）">ACTIONFOX（快乐狐狸）</a>|
+										<a href="#" title="WindTour（威迪瑞）">WindTour（威迪瑞）</a>|
+										<a href="#" title="Osprey">Osprey</a>|
+										<a href="#" title="k2summit（凯图）">k2summit（凯图）</a>|
+										<a href="#" title="SAMI TIME萨米时光">SAMI TIME萨米时光</a>|
+										<a href="#" title="HIGHROCK（天石）">HIGHROCK（天石）</a>|
+										<a href="#" title="Deuter （多特）">Deuter （多特）</a>|
+										<a href="#" title="Fire-Maple（火枫）">Fire-Maple（火枫）</a>|
+										<a href="#" title="LA SPORTIVA（拉思珀蒂瓦）">LA SPORTIVA（拉思珀蒂瓦）</a>|
+										<a href="#" title="MARMOT（土拨鼠）">MARMOT（土拨鼠）</a>|
+										<a href="#" title="SALEWA（沙乐华）">SALEWA（沙乐华）</a>|
+										<a href="#" title="Jack Wolfskin（狼爪）">Jack Wolfskin（狼爪）</a>|
+										<a href="#" title="CAMELBAK（驼峰）">CAMELBAK（驼峰）</a>|
+										<a href="#" title="BUFF">BUFF</a>|
+										<a href="#" title="Rocket Science Sports">Rocket Science Sports</a>|
+										<a href="#" title="GARMONT">GARMONT</a>|
+										<a href="#" title="七加二">七加二</a>|
+										<a href="#" title="Hot Chillys(红辣椒)">Hot Chillys(红辣椒)</a>|
+										<a href="#" title="BLACK YAK（布来亚克）">BLACK YAK（布来亚克）</a>|
+										<a href="#" title="Trackman（自游人）">Trackman（自游人）</a>|
+										<a href="#" title="PURELAND（普尔兰德）">PURELAND（普尔兰德）</a>|
+										<a href="#" title="Acome（ACME阿珂姆）">Acome（ACME阿珂姆）</a>|
+										<a href="#" title="ASOLO">ASOLO</a>|
+										<a href="#" title="BLACK DIAMOND（黑钻）">BLACK DIAMOND（黑钻）</a>|
+										<a href="#" title="CRISPI">CRISPI</a>|
+										<a href="#" title="DOITE（多伊特）">DOITE（多伊特）</a>|
+										<a href="#" title="BIG Agnes比格尼斯">BIG Agnes比格尼斯</a>|
+										<a href="#" title="Fenix">Fenix</a>|
+										<a href="#" title="LEKI">LEKI</a>|
+										<a href="#" title="MSR">MSR</a>|
+										<a href="#" title="MBC">MBC</a>|
+										<a href="#" title="Rebornsun（鲁滨逊）">Rebornsun（鲁滨逊）</a>|
+										<a href="#" title="Stanley（史丹利）">Stanley（史丹利）</a>|
+										<a href="#" title="BlackCrag(黑岩)">BlackCrag(黑岩)</a>|
+										<a href="#" title="STRONG OXYGEN（强氧）">STRONG OXYGEN（强氧）</a>|
+										<a href="#" title="BIGPACK(派格）">BIGPACK(派格）</a>|
+										<a href="#" title="AIRTEX（亚特）">AIRTEX（亚特）</a>|
+										<a href="#" title="EZON(宜准)">EZON(宜准)</a>|
+										<a href="#" title="LEIXE（雷蝎）">LEIXE（雷蝎）</a>|
+										<a href="#" title="Caxa">Caxa</a>|
+										<a href="#" title="ODLO奥递乐">ODLO奥递乐</a>|
+										<a href="#" title="AEGISMAX翼马">AEGISMAX翼马</a>|
+										<a href="#" title="BLACK ICE（黑冰）">BLACK ICE（黑冰）</a>|
+										<a href="#" title="NOMADO乐马多">NOMADO乐马多</a>|
+										<a href="#" title="Clothin（卡鲁森）">Clothin（卡鲁森）</a>|
+										<a href="#" title="Mont-Bell（梦贝路）">Mont-Bell（梦贝路）</a>|
+										<a href="#" title="TOMO天摩">TOMO天摩</a>|
+										<a href="#" title="FLYON">FLYON</a>|
+										<a href="#" title="Garmin">Garmin</a>|
+										<a href="#" title="MILLET（觅乐）">MILLET（觅乐）</a>|
+										<a href="#" title="Tecnica（泰尼卡）">Tecnica（泰尼卡）</a>|
+										<a href="#" title="SUNREE（山力士）">SUNREE（山力士）</a>|
+										<a href="#" title="UTO(悠途)">UTO(悠途)</a>|
+										<a href="#" title="SHEHE（极星）">SHEHE（极星）</a>|
+										<a href="#" title="ANPSTART">ANPSTART</a>|
+										<a href="#" title="NITECORE奈特科尔">NITECORE奈特科尔</a>|
+										<a href="#" title="PETZL">PETZL</a>|
+										<a href="#" title="Baizus（百足氏）">Baizus（百足氏）</a>|
+										<a href="#" title="Celestron（星特朗）">Celestron（星特朗）</a>|
+										<a href="#" title="BRS（兄弟）">BRS（兄弟）</a>|
+										<a href="#" title="PINEWOOD（绿松林）">PINEWOOD（绿松林）</a>|
+										<a href="#" title="红景天">红景天</a>|
+										<a href="#" title="LIFEFREES（乐飞思）">LIFEFREES（乐飞思）</a>|
+										<a href="#" title="Diercon（康米尔）">Diercon（康米尔）</a>|
+										<a href="#" title="XLIMIT（艾利米特）">XLIMIT（艾利米特）</a>|
+										<a href="#" title="GRITGRAVEL（沙砾）">GRITGRAVEL（沙砾）</a>|
+										<a href="#" title="HX OUTDOORS(汉道)">HX OUTDOORS(汉道)</a>|
+										<a href="#" title="Outshine（奥特山）">Outshine（奥特山）</a>|
+										<a href="#" title="JR GEAR">JR GEAR</a>|
+										<a href="#" title="MOUNTAIN YOYO (慢悠悠)">MOUNTAIN YOYO (慢悠悠)</a>|
+										<a href="#" title="Keith（铠斯）">Keith（铠斯）</a>|
+										<a href="#" title="Xinda欣达">Xinda欣达</a>|
+										<a href="#" title="Pelliot伯希和">Pelliot伯希和</a>|
+										<a href="#" title="三峰">三峰</a>|
+										<a href="#" title="SEALOCK思路客">SEALOCK思路客</a>|
+										<a href="#" title="Trimm">Trimm</a>|
+										<a href="#" title="户外单兵">户外单兵</a>|
+										<a href="#" title="君羽">君羽</a>|
+										<a href="#" title="CROCS卡骆驰">CROCS卡骆驰</a>|
+										<a href="#" title="HNK悍将">HNK悍将</a>|
+										<a href="#" title="Dive Sail">Dive Sail</a>|
+										<a href="#" title="magforce麦格霍斯">magforce麦格霍斯</a>|
+										<a href="#" title="STORMTECH风暴">STORMTECH风暴</a>|
+										<a href="#" title="ARCTOS极星">ARCTOS极星</a>|
+										<a href="#" title="Icebreaker拓冰者">Icebreaker拓冰者</a>|
+										<a href="#" title="Snow diamond雪钻">Snow diamond雪钻</a>|
+										<a href="#" title="CRAFT">CRAFT</a>|
+										<a href="#" title="SKINS思金斯">SKINS思金斯</a>|
+										<a href="#" title="ATUNAS欧都纳">ATUNAS欧都纳</a>|
+										<a href="#" title="NAJIREN南极人">NAJIREN南极人</a>|
+										<a href="#" title="Ultimate Direction">Ultimate Direction</a>|
+										<a href="#" title="Ventifact风砺石">Ventifact风砺石</a>|
+										<a href="#" title="HONGZHUI红缀">HONGZHUI红缀</a>|
+										<a href="#" style="color: #90a221;">全部品牌 〉</a>
+									</dd>
+								</dl></div>
+							</li>
+							<li><a href="#"><img src="{% static 'images/index_images/nav/icon/icon_38.png'%}" title="户外保险">户外保险</a><span><img src="{% static 'images/index_images/nav/icon/youla.png'%}"></span></li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="nav_right">
+					<ul class="lit1">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="#">特卖会</a></li>
+						<li><a href="#">团购</a></li>
+						<li><a href="#">yes!好货</a>
+							<img src="{% static 'images/index_images/nav/hot.gif'%}">
+						</li>
+						<li><a href="#">品牌街</a></li>
+						<li><a href="#">测评</a></li>
+						<li><a href="#">保险</a></li>
+					</ul>
+					<ul class="lit2">
+						<li><img src="{% static 'images/detail_images/phone.png'%}"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="introduce">
+			<div class="center">
+				<h1>首页 ›男装 ›速干衣裤 ›速干衣 ›UTO(悠途) ›<span id="nam1"></span></h1>
+				<div id="box">
+					<div id="middleImg">
+						<img src="{% static ''%}" id="img1">
+						<div id="middleArea"></div>
+					</div>
+					<div id="small">
+						<div id="prev_d">
+
+						</div>
+						<div id="next_d">
+
+						</div>
+						<div id="small_ob">
+							<ul id="aul">
+							<li><img src="{% static ''%}" id="img2"></li>
+							<li><img src="{% static ''%}" id="img3"></li>
+							<li><img src="{% static ''%}" id="img4"></li>
+							<li><img src="{% static ''%}" id="img5"></li>
+							<li><img src="{% static ''%}" id="img6"></li>
+							<li><img src="{% static ''%}" id="img7"></li>
+
+							</ul>
+						</div>
+
+					</div>
+					<div id="bigArea">
+						<img id="bigImg" src="{% static ''%}">
+					</div>
+					<div id="rollArea">
+						<h2 id="nam5"></h2>
+						<p>购物返积分 <span id="nam2"> </span>起|点评送积分<span id="nam3"></span>| 商品评论 <span>0 </span></p>
+						<div class="tuanit-l"></div>
+						<div class="tuanit-r"></div>
+						<div id="sall">
+							<p>会员价：<span id="nam4"></span></p>
+							<dl>
+								<dt>商品评价</dt>
+								<dd>0</dd>
+							</dl>
+						</div>
+						<div class="rel">
+							<i>颜色:</i>
+							<ul id="rel_ul">
+								<li>男款-黑灰色<span></span></li><li>男款-黑蓝色<span></span></li><li>女款-黑灰色<span></span></li><li>女款-粉绿色<span></span></li><li>女款-珊瑚红<span></span></li>
+							</ul>
+						</div>
+						<div class="guige">
+							<i>规格:</i>
+							<ul id="guige_ul">
+								<li>S（小）<span></span></li><li>M（中）<span></span></li><li>L（大）<span></span></li><li>XL（加大）<span></span></li><li>XXl（特大）<span></span></li>
+							</ul>
+						</div>
+						<div class="peisong">
+							<i>配送至：</i><select>
+								<option>广东</option>
+								<option>湖南</option>
+								<option>北京</option>
+								<option>海南</option>
+								<option>天津</option>
+
+							</select>
+							免运费由 <a href="#">上海悠途实业有限公司</a> 销售和发货
+						</div>
+						<div class="num">
+							<i>购买数量：</i><input id="res" type="button" value="-"><input type="text" value="1" id="tt"><input id="add" type="button" value="+">库存100件<span></span>
+						</div>
+						<div id="buy">
+							<div id="buy_b">
+
+							</div>
+							<div id="adcat">
+
+							</div>
+							<span></span>
+						</div>
+						<div id="uto">
+							<img src="{% static 'images/detail_images/uto.jpg'%}">
+						</div>
+					</div>
+					<div class="share">
+						<span>分享到：</span>
+						<ul>
+							<li><img src="{% static 'images/detail_images/qqim.png'%}"></li>
+							<li><img src="{% static 'images/detail_images/weixin.png'%}"></li>
+							<li><img src="{% static 'images/detail_images/qqmb.gif'%}"></li>
+							<li><img src="{% static 'images/detail_images/sinaminiblog.gif'%}"></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!---->
+		<div id="doll">
+			<div class="center">
+				<div id="doll_l">
+					<dl style="margin-top: 0;">
+						<dt>相关分类</dt>
+						<dd><a href="#">速干长裤</a><a href="#">速干短裤</a></dd>
+					</dl>
+					<dl>
+						<dt>同类品牌</dt>
+						<dd><a href="#">KROCEUS 科诺修思</a></dd>
+						<dd><a href="#">Baizus（百足氏）</a></dd>
+						<dd><a href="#">Trackman（自游人）</a></dd>
+						<dd><a href="#">CaxaAIRTEX（亚特）</a></dd>
+						<dd><a href="#">k2summit（凯图）</a></dd>
+						<dd><a href="#">XLIMIT（艾利米特）</a></dd>
+						<dd><a href="#">RAXTTISS(铁仕)</a></dd>
+						<dd><a href="#">Kailas（凯乐石）</a></dd>
+
+					</dl>
+					<dl>
+						<dt>同类排行榜</dt>
+						<dd class="lp"><a href="#"><img src="{% static 'images/detail_images/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy80Mjk5OS8yMDE0MDUzMS8yMDE0MDUzMTA4NDc1NzMxNTIuanBn.auto.jpg'%}">
+							<p>RAX春夏速干衬衫男 两截可拆快干衣 防紫外线透气衬衣40-2A069</p>
+							<div>￥158.00</div>
+						</a></dd>
+						<dd class="lp"><a href="#"><img src="{% static 'images/detail_images/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy81NzU1OS8yMDE2MDUxMS8yMDE2MDUxMTEwNTkxOTI2MTkuanBn.auto.jpg'%}">
+							<p>Salewa 沙乐华 男式 PROTECTOR DRY stretch M L/S SRT四向弹力</p>
+							<div>￥229.00</div>
+						</a></dd>
+						<dd class="lp"><a href="#"><img src="{% static 'images/detail_images/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy8yNTM5Ni8yMDE2MDcyMi8yMDE2MDcyMjEzMjc1MzQwMTQuanBn.auto.jpg'%}">
+							<p>Baizus百足氏　男式速干短袖衬衣SMT-0002</p>
+							<div>￥79.00</div>
+						</a></dd>
+					</dl>
+					<dl>
+						<dt>同品排行榜</dt>
+						<dd class="lp"><a href="#"><img src="{% static 'images/detail_images/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy8zNzE3NDQ2MC8yMDE1MDUxMS8yMDE1MDUxMTE0NDYzMTIwNjguanBn.auto.jpg'%}">
+							<p>UTO悠途男女款内裤 两条装</p>
+							<div>￥109.00</div>
+						</a></dd>
+						<dd class="lp"><a href="#"><img src="{% static 'images/detail_images/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy8zNzE3NDQ2MC8yMDE1MDkxNS8yMDE1MDkxNTE1MjY0MTc5MTguanBn.auto.jpg'%}">
+							<p>UTO 户外运动内裤 coolmax专业速干内裤 排汗3D无缝短裤男女</p>
+							<div>￥59.00</div>
+						</a></dd>
+						<dd class="lp"><a href="#"><img src="{% static 'images/detail_images/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82MTY2Ny8yMDE1MTIxNy8yMDE1MTIxNzE0MDM0MTg3MjYuanBlZw==.auto.jpeg'%}">
+							<p>UTO悠途速干内衣保暖内衣套装 户外功能竹炭排汗内衣男女</p>
+							<div>￥199.00</div>
+						</a></dd>
+					</dl>
+
+				</div>
+				<div id="doll_r">
+					<div id="doll_t">
+						<ul id="lol">
+							<li>商品详情</li>
+							<li>商品评论 (0)</li>
+							<li>产品咨询</li>
+						</ul>
+
+						<div class="ap">
+							<img src="{% static ''%}" id="img8">
+						</div>
+						<div class="ap"><img src="{% static 'images/detail_images/pic1-1.png'%}"></div>
+						<div class="ap"><img src="{% static 'images/detail_images/pic-3.png'%}"></div>
+					</div>
+
+					<div id="doll_b">
+						<img src="{% static ''%}" id="img9" class="ad">
+						<img src="{% static 'images/detail_images/pic1-2.png'%}" class="ad">
+						<img src="{% static 'images/detail_images/cm.gif'%}" class="ad">
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="msg">
+		<div class="center">
+
+			<img src="{% static 'images/index_images/bannerbtm.png'%}">
+
+		</div>
+
+	</div>
+	<!--foot-->
+	<div id="foot">
+		<div class="center">
+			<div class="foot_t">
+				<dl>
+					<dt>购物指南</dt>
+					<dd><a href="#">购物流程</a></dd>
+					<dd><a href="#">联系客服</a></dd>
+					<dd><a href="#">点评返现</a></dd>
+				</dl>
+				<dl>
+					<dt>关于支付</dt>
+					<dd><a href="#">在线支付</a></dd>
+					<dd><a href="#">银行转账</a></dd>
+					<dd><a href="#">积分支付</a></dd>
+				</dl>
+				<dl>
+					<dt>售后服务</dt>
+					<dd><a href="#">退换货政策</a></dd>
+					<dd><a href="#">退换货流程</a></dd>
+					<dd><a href="#">退款说明</a></dd>
+				</dl>
+				<dl>
+					<dt>关于我们</dt>
+					<dd><a href="#">商城简介</a></dd>
+					<dd><a href="#">诚征英才</a></dd>
+					<dd><a href="#">联系我们</a></dd>
+				</dl>
+				<dl>
+					<dt>市场合作</dt>
+					<dd><a href="#">商家入驻</a></dd>
+					<dd><a href="#">采销业务</a></dd>
+					<dd><a href="#">广告合作</a></dd>
+				</dl>
+				<dl>
+					<dt>装备维修</dt>
+					<dd><a href="#">服务流程</a></dd>
+					<dd><a href="#">服务协议</a></dd>
+					<dd><a href="#">隐私协议</a></dd>
+				</dl>
+				<dl style="margin-right: 0;">
+					<dt>装备租赁</dt>
+					<dd><a href="#">租客指南</a></dd>
+					<dd><a href="#">租赁流程</a></dd>
+					<dd><a href="#">租赁协议</a></dd>
+				</dl>
+				<ul>
+					<li>团购/商城合作：022-23857290-8018</li>
+					<li>市场合作：022-23857290-8031</li>
+					<li>联系客服电话：400-040-0702</li>
+					<li>工作时间：AM9：00-PM18：00（除周日）</li>
+				</ul>
+			</div>
+			<div class="foot_b">
+				<p>友情链接<a style="margin-left: 12px;" href="#">装备酷</a>
+							<a href="#">源一云商</a>
+							<a href="#">射箭吧</a>
+							<a href="#">网上旅行社</a>
+							<a href="#">魅网奢品</a>
+							<a href="#">上海旅游景点</a>
+							<a href="#">品牌服装加盟</a>
+							<a href="#">微商代理</a>
+							<a href="#">亚展</a>
+							<a href="#">ISPO</a>
+							<a href="#">骑行圈</a>
+							<a href="#">自行车商城</a>
+							<a href="#">墙根网</a>
+							<a href="#">特价机票</a>
+							<a href="#">骆驼</a>
+							<a href="#">张家口旅行社</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--footer-->
+	<div id="footer">
+		<img src="{% static 'images/index_images/donkey .png'%}" class="donkey">
+		<p>Copyright©2004-2016 7jia2.com 天津七迦二科技有限公司 版权所有 ICP备案证书号:津ICP备14004534号-1 ICP证 津B2-20150003</p>
+		<p>七加二提醒您购买户外保险 保障出行安全 匿名举报和网站建议直通车 CEO邮箱：marketing001@7jia2.com</p>
+		<p>七迦二旗下网站：metasolo源一云商 装备酷</p>
+		<img src="{% static 'images/index_images/cnnic.png'%}">
+		<img src="{% static 'images/index_images/baidu.png'%}">
+	</div>
+    </body>
+</html>

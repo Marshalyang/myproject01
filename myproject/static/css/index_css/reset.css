@@ -1,0 +1,7 @@
+html,body,ul,ol,li,dl,dt ,dd,p, h1 ,h2 ,h3 ,h4 ,h5 ,h6, form, table ,tr, td,p,img,input{padding:0;margin:0;}
+li{list-style:none;}
+img{border:none;overflow: hidden;}
+a{text-decoration:none;}
+i,em{font-style:normal;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+/*html,body{height:100%;width:100%;}*/

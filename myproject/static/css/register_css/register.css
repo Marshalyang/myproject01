@@ -1,0 +1,164 @@
+
+html,body{
+	height:100%;width:100%;
+	font-size: 12px;
+	color: #616161;
+}
+input{
+	outline: none;
+}
+.center{
+	width: 1000px;
+	margin: 0 auto;
+}
+/*top*/
+#top{
+	padding-top: 30px;
+	overflow: hidden;
+}
+#top .img1{
+	float: left;
+	overflow: hidden;
+}
+#top .img2{
+	float: right;
+}
+
+/*pgty*/
+#pgty{
+	padding-bottom: 123px;
+	overflow: hidden;
+}
+#pgty form{
+	border: solid 1px #dadada;
+	float: right;
+	background: #fcfcfc;
+}
+#pgty form ul{
+	overflow: hidden;
+}
+#pgty form ul li{
+	float: left;
+	font-size: 20px;
+	width: 218px;
+	height: 47px;
+	text-align: center;
+	line-height: 47px;
+}
+#pgty form ul li:nth-child(2){
+	background: #f2f2f2;
+}
+#pgty form ul li a{
+	color: #616161;
+	width: 218px;
+	height: 47px;
+	display: block;
+}
+.form_center{
+	margin-left: 60px;
+	position: relative;
+}
+#txt{
+	margin-top: 54px;
+}
+#txt input,#psd input{
+	width: 295px;
+	height: 38px;
+	padding-left: 30px;
+	border: 1px solid #e9e9e9;
+}
+#psd{
+	margin-top: 10px;
+}
+i{
+	color: red;
+	margin: 5px;
+	/*display: block;*/
+	display: none;
+}
+form p{
+	position: absolute;
+	right: 52px;
+	bottom: 175px;
+}
+form p a{
+	text-decoration: underline;
+	color: #616161;
+}
+ form p a:hover{
+	color: red;
+}
+.sub{
+	width: 327px;
+	height: 40px;
+	border: 0;
+	background: #81a029;
+	margin-top: 37px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+}
+.sub:hover{
+	background: #377c39;
+}
+h4{
+	margin: 23px 0 18px 5px;
+}
+form img{
+	margin: 0 26px  40px 26px ;
+}
+
+#txt,#psd{
+	position: relative;
+}
+#txt img,#psd img{
+	position: absolute;
+	left:-20px;
+	top:10px;
+	
+}
+
+#footer{
+	height: 72px;
+	border-top: solid 1px #dadada;
+	color: #dadada;
+	text-align: center;
+	padding-top:29px ;
+}
+#footer p{
+	line-height: 25px;
+}
+
+#fxdc{
+	/*width: 57px;
+	height: 115px;*/
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.fxdc_left,.fxdc_right{
+	float: left;
+}
+.fxdc_left{
+	display: none;
+}
+.fxdc_left ul li {
+	float: left;
+	margin-right: 10px;
+	background: #fcfcfc;
+}
+.fxdc_left ul li a{
+	display: block;
+	height: 93px;
+	padding: 11px;
+	border: solid 1px #dadada;
+	color: #000000;
+}
+.fxdc_left ul li dl,.fxdc_left ul li img{
+	float: left;
+}
+.fxdc_left ul li dl{
+	margin: 16px 5px;
+}

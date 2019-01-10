@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index_css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index_css/index.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/register_css/register.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/mycat.css/mycat.css' %}"/>
+		<script src="{% static 'js/index_js/jquery-1.12.3.js' %}"></script>
+		<script src="{% static 'js/index_js/jquery.cookie.js' %}"></script>
+		<script src="{% static 'js/mycat.js/mycat.js' %}"></script>
+	</head>
+	<body>
+		<div id="register">
+			<div class="center">
+				<ul id="list1">
+					<li><a href="index.html">七加二商城</a></li>
+					<li class="kuan"><a href="#"> 装备酷</a></li>
+					<li class="kuan"><a href="#"> 相伴</a></li>
+					<li class="kuan"><a href="#">移动端</a></li>
+				</ul>
+				<ul id="list2">
+					<li>您好,欢迎来到七加二商城！</li>
+					<li><a href="register.html">[登录]</a></li>
+					<li><a href="login.html">[注册]</a></li><a href="login.html">
+					</a><li class="qq"><a href="login.html"></a><a href="#"></a></li>
+					<li class="weibo"><a href="#"></a></li>
+					<li class="kuan"><a href="#">我的订单</a></li>
+					<li class="kuan"><a href="#">站内消息 </a></li><a href="#">
+					</a><li class="kuan"><a href="#"></a><a href="#">帮助中心</a></li><a href="#">
+				</a></ul><a href="#">
+
+			</a></div><a href="#">
+		</a></div><a href="#">
+		<!---->
+		</a><div id="logo"><a href="#">
+			</a><div class="center"><a href="#">
+				</a><div class="logo_left"><a href="#">
+					</a><a href="index.html"><img src="{% static 'images/mycat_images/201511170959056304.png'%}"></a>
+				</div>
+				<div class="logo_center" id="lct">
+					<div class="triangle"></div>
+					<img src="{% static 'images/index_images/logo/search.png'%}">
+					<form>
+						<input type="text" class="ipt1">
+						<input type="submit" value="搜索" class="ipt2">
+
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+		<!---->
+		<div id="mycat">
+			<div class="center">
+				<h3>我的购物车</h3>
+				<div id="mycat_t">
+					<ul>
+						<li style="padding-left: 20px;"><input type="checkbox" checked="checked" id="allSelect">全选</li>
+						<li>商品信息</li>
+						<li>单价（元）</li>
+						<li>数量</li>
+						<li>总价</li>
+						<li>操作</li>
+					</ul>
+				</div>
+				<div id="mycat_c">
+					<ul id="mycat_ul">
+						<!--<li>
+							<input checked="checked" type="checkbox" id="ipt"/><img src="../images/mycat_images/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy83MjA2OC8yMDE3MDkxOS8yMDE3MDkxOTEwMzY0NjEyMjYuanBlZw==.auto.jpeg"/>
+							<span id="boom1">uto悠途秋冬长袖健身服男速干夜跑时尚外套女户外运动防风跑步衣【男】黑灰色 M（中）</span>
+							<span id="boom2">￥299.00</span>
+							<input type="button" value="-" id="ipt1" />
+							<input type="text"  value="1" id="ipt2"/>
+							<input type="button"  value="+"id="ipt3" />
+
+							<span id="boom3">￥299.00</span>
+							<a href="#" id="boom4">删除</a>
+						</li>-->
+					</ul>
+
+				</div>
+				<div id="mycat_b">
+					<ul>
+						<li id="boom7"><a href="" id="boom11">删除选中</a></li>
+						<!--<li id="boom8">已选商品：<span>1</span></li>-->
+						<li id="boom9">合计：￥<span></span></li>
+						<li id="boom10"><a href="#">去结算</a></li>
+					</ul>
+				</div>
+				<div id="mycat_f">
+					<img src="{% static 'images/mycat_images/pic_03.png'%}">
+				</div>
+
+			</div>
+		</div>
+		<div id="msg">
+			<div class="center">
+				<img src="{% static 'images/mycat_images/foot_green.jpg'%}">
+			</div>
+
+		</div>
+		<!--foot-->
+		<div id="foot">
+			<div class="center">
+				<div class="foot_t">
+					<dl>
+						<dt>购物指南</dt>
+						<dd><a href="#">购物流程</a></dd>
+						<dd><a href="#">联系客服</a></dd>
+						<dd><a href="#">点评返现</a></dd>
+					</dl>
+					<dl>
+						<dt>关于支付</dt>
+						<dd><a href="#">在线支付</a></dd>
+						<dd><a href="#">银行转账</a></dd>
+						<dd><a href="#">积分支付</a></dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="#">退换货政策</a></dd>
+						<dd><a href="#">退换货流程</a></dd>
+						<dd><a href="#">退款说明</a></dd>
+					</dl>
+					<dl>
+						<dt>关于我们</dt>
+						<dd><a href="#">商城简介</a></dd>
+						<dd><a href="#">诚征英才</a></dd>
+						<dd><a href="#">联系我们</a></dd>
+					</dl>
+					<dl>
+						<dt>市场合作</dt>
+						<dd><a href="#">商家入驻</a></dd>
+						<dd><a href="#">采销业务</a></dd>
+						<dd><a href="#">广告合作</a></dd>
+					</dl>
+					<dl>
+						<dt>装备维修</dt>
+						<dd><a href="#">服务流程</a></dd>
+						<dd><a href="#">服务协议</a></dd>
+						<dd><a href="#">隐私协议</a></dd>
+					</dl>
+					<dl style="margin-right: 0;">
+						<dt>装备租赁</dt>
+						<dd><a href="#">租客指南</a></dd>
+						<dd><a href="#">租赁流程</a></dd>
+						<dd><a href="#">租赁协议</a></dd>
+					</dl>
+					<ul>
+						<li>团购/商城合作：022-23857290-8018</li>
+						<li>市场合作：022-23857290-8031</li>
+						<li>联系客服电话：400-040-0702</li>
+						<li>工作时间：AM9：00-PM18：00（除周日）</li>
+					</ul>
+				</div>
+				<div class="foot_b">
+					<p>友情链接<a style="margin-left: 12px;" href="#">装备酷</a>
+								<a href="#">源一云商</a>
+								<a href="#">射箭吧</a>
+								<a href="#">网上旅行社</a>
+								<a href="#">魅网奢品</a>
+								<a href="#">上海旅游景点</a>
+								<a href="#">品牌服装加盟</a>
+								<a href="#">微商代理</a>
+								<a href="#">亚展</a>
+								<a href="#">ISPO</a>
+								<a href="#">骑行圈</a>
+								<a href="#">自行车商城</a>
+								<a href="#">墙根网</a>
+								<a href="#">特价机票</a>
+								<a href="#">骆驼</a>
+								<a href="#">张家口旅行社</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div id="footer">
+			<img src="{% static 'images/index_images/donkey .png'%}" class="donkey">
+			<p>Copyright©2004-2016 7jia2.com 天津七迦二科技有限公司 版权所有 ICP备案证书号:津ICP备14004534号-1 ICP证 津B2-20150003</p>
+			<p>七加二提醒您购买户外保险 保障出行安全 匿名举报和网站建议直通车 CEO邮箱：marketing001@7jia2.com</p>
+			<p>七迦二旗下网站：metasolo源一云商 装备酷</p>
+			<img src="{% static 'images/index_images/cnnic.png'%}">
+			<img src="{% static 'images/index_images/baidu.png'%}">
+		</div>
+		<!---->
+		<div id="fxdc">
+			<div class="fxdc_left">
+				<ul>
+				<li><a href="index.html"><img src="{% static 'images/register_images/wechat-pic.png'%}">
+				<dl>
+					<dt>七加二商城</dt>
+					<dt>APP下载</dt>
+					<dd>注册送5元</dd>
+				</dl></a></li>
+				<li><a href="index.html"><img src="{% static 'images/register_images/wechat-pic.png'%}">
+				<dl>
+					<dt>七加二</dt>
+					<dt>官方微信</dt>
+					<dd>lvtuan_net</dd>
+				</dl></a></li>
+			</ul>
+			</div>
+			<div class="fxdc_right">
+				<img src="{% static 'images/register_images/icon_24.png'%}">
+			</div>
+		</div>
+    </body>
+</html>

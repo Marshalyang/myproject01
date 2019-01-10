@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>错误404 - 七加二驴友商城</title>
+<link rel="stylesheet" type="text/css" href="/platform/static/styles/css/error404.css">
+</head>
+<body>
+<div class="container">
+		<div class="left"><img src="/platform/static/styles/images/left404.jpg" ></div>
+		<div class="right">
+			<div class="img404"><img src="/platform/static/styles/images/404.jpg" ></div>
+			<h2>您访问的页面已经不存在了！~~~</h2>
+				<div>
+					<ul>
+						<li><em>&middot;</em> 您可以稍后再试 或 <a href="/article/7.html">联系我们</a></li>
+						<li><em>&middot;</em> 将在 <strong id="time">10</strong> 秒后将自动带您 <a href="/" class="fh">返回首页&gt;&gt;</a></li>
+						<li><em>&middot;</em> 我们还有更有意思的：<a href="/zunlv">尊驴</a> | <a href="/tuan">团购</a> | <a href="/tmh">特卖会</a> | <a href="http://www.zbcool.com/">装备酷</a></li>
+					</ul>
+				</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" charset="utf-8">
+	setTimeout("send();", 1000);
+	function send(){
+		var i = parseInt(document.getElementById("time").innerHTML);
+		i--;
+		if (i < 0) {
+			window.location.href = '/';
+		} else {
+			document.getElementById("time").innerHTML = i;
+			setTimeout("send();", 1000);
+		}
+	}
+</script>
+</html>
