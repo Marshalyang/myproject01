@@ -229,6 +229,10 @@ li{list-style: none;
 	margin-bottom: 0;
 	position: relative;
 }
+.lunbo_center img{
+	width: 90%;
+	height: 90%;
+}
 .lunbo_right{
 	margin-top:9px ;
 }
@@ -346,6 +350,12 @@ li{list-style: none;
 	opacity: 0;
 	filter: alpha(opacity=0);
 }
+
+.swiper-container img{
+	width: 100%;
+	height: 100%;
+}
+
 .lunbo_center .box6{
 	width: 100%;
 	height: 30px;

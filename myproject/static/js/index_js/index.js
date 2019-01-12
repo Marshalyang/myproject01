@@ -1,5 +1,25 @@
 
 onload = function(){
+
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		slidesPerView: 1,
+		paginationClickable: true,
+		spaceBetween: 10,
+		loop: true,
+		effect: 'cube',
+        grabCursor: true,
+        cube: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94
+        },
+        autoplay:3000,
+});
+
 	//top_none
 	top_block.onmouseenter = function(){
 		top_none.style.display = "block";
@@ -455,3 +475,5 @@ onload = function(){
 		document.body.scrollTop = 0;
 	}
 }
+
+
