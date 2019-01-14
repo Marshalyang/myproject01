@@ -32,7 +32,7 @@
 			<div id="register">
 				<div class="center">
 					<ul id="list1">
-						<li><a href="#">登录</a></li>
+						<li><a href="{% url 'mt:register' %}">登录</a></li>
 						<li><a href="{% url 'mt:login' %}">注册</a></li>
 					</ul>
 					<ul id="list2">
@@ -92,7 +92,7 @@
 		<div id="nav">
 			<div class="center">
 				<div class="nav_left">
-					<span><img src="{% static 'images/index_images/nav/icon/icon_03.png'%}" <="" span="">
+					<span><img src="{% static 'images/index_images/nav/icon/icon_03.png'%}"<="" span="">
 					全部商品分类
 				</span></div>
 
@@ -1224,40 +1224,42 @@
 					</ul>
 				</div>
 				<div id="onef_room_right">
+
 					<ul id="dnf">
-						<!--<li><a href="#"><img src="../images/index_images/all_f/L2vjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82ODg1OS8yMDE3MDYwNS8yMDE3MDYwNTE0MjM0ODU0NTQuanBn.auto.jpg"/></a>
+						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82ODg1OS8yMDE3MDYwNS8yMDE3MDYwNTE0MjM0ODU0NTQuanBn.auto.jpg' %}"/></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
 						</li>
-						<li><a href="#"><img src="../images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82ODkzNC8yMDE3MDMwNy8yMDE3MDMwNzA5NDUxMTc3NDguanBn.auto.jpg"/></a>
+						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82ODkzNC8yMDE3MDMwNy8yMDE3MDMwNzA5NDUxMTc3NDguanBn.auto.jpg' %}"/></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
 						</li>
-						<li><a href="#"><img src="../images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82ODYyNi8yMDE3MDYwNS8yMDE3MDYwNTE0MjAxMDY3NjEuanBn.auto.jpg"/></a>
+						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82ODYyNi8yMDE3MDYwNS8yMDE3MDYwNTE0MjAxMDY3NjEuanBn.auto.jpg' %}"/></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
 						</li>
-						<li><a href="#"><img src="../images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTA5NS8yMDE3MDYwNS8yMDE3MDYwNTE0MjkzODI0MTkuanBn.auto.jpg"/></a>
+						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTA5NS8yMDE3MDYwNS8yMDE3MDYwNTE0MjkzODI0MTkuanBn.auto.jpg' %}"/></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
 						</li>
-						<li><a href="#"><img src="../images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTc2MC8yMDE3MDYwNS8yMDE3MDYwNTE0NDQzNjg1NjYuanBn.auto.jpg"/></a>
+						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTc2MC8yMDE3MDYwNS8yMDE3MDYwNTE0NDQzNjg1NjYuanBn.auto.jpg' %}"/></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
 						</li>
-						<li><a href="#"><img src="../images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTcyNS8yMDE3MDYzMC8yMDE3MDYzMDEzMzMxNzQ3NjguanBn.auto.jpg"/></a>
+						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTcyNS8yMDE3MDYzMC8yMDE3MDYzMDEzMzMxNzQ3NjguanBn.auto.jpg' %}"/></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
 						</li>
-						<li><a href="#"><img src="../images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTE3Mi8yMDE3MDYwNS8yMDE3MDYwNTE0MTc0NjQwNDcuanBn.auto.jpg"/></a>
+						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTE3Mi8yMDE3MDYwNS8yMDE3MDYwNTE0MTc0NjQwNDcuanBn.auto.jpg' %}"/></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
 						</li>
-						<li><a href="#"><img src="../images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTIyNy8yMDE3MDMxNC8yMDE3MDMxNDE0MzMwMzYxMTUuanBn.auto.jpg"/></a>
+						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82OTIyNy8yMDE3MDMxNC8yMDE3MDMxNDE0MzMwMzYxMTUuanBn.auto.jpg' %}"/></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
-						</li>-->
+						</li>
 					</ul>
+
 					<ul>
 						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy83MDI1NC8yMDE3MDYwNS8yMDE3MDYwNTE0NTYxMzc4NzMuanBn.auto.jpg'%}"></a>
 							<p><a href="#">UTO长裤运动装</a></p>
