@@ -18,24 +18,34 @@
 		</div>
 		<div id="pgty">
 			<div class="center">
-				<form>
+				<form id="login" action="{% url 'mt:register' %}" method="post">
+                    {% csrf_token %}
 					<ul>
 						<li><a href="#">会员登录</a></li>
 						<li><a href="{% url 'mt:login' %}">会员注册</a></li>
 					</ul>
 					<div class="form_center">
+
+
 						<div id="txt">
-							<input type="text" placeholder="手机号/用户名/邮箱"><br>
-							<i>您必须提供一个用户名</i>
+							<input type="text" name="username" placeholder="手机号/用户名"><br>
+							<i>您提供用户名有误</i>
+                            {% if erro %}
+                                <font  style="color: red;">{{ erro }}</font>
+                            {% endif %}
 							<img src="{% static 'images/register_images/icon_03.png'%}">
 						</div>
+
+
 						<div id="psd">
-							<input type="password" placeholder="密码"><br>
+							<input type="password" name="password" placeholder="密码"><br>
 							<i>您必须提供一个密码</i>
 							<img src="{% static 'images/register_images/icon_07.png'%}">
 						</div>
+
+
 						<p><a href="#">忘记密码</a></p>
-						<input type="button" value="登录" class="sub"><br>
+						<input id="subButton" type="button" value="登录" class="sub"><br>
 						<h4>合作网站账号登录</h4>
 						<a href="#"><img src="{% static 'images/register_images/icon_11.png'%}"></a>
 						<a href="#"><img src="{% static 'images/register_images/icon_13.png'%}"></a>

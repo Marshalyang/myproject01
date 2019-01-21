@@ -179,3 +179,39 @@ onload = function(){
 	
 	
 }
+$(function () {
+	$("#add").click(function () {
+        var num = $("#tt").attr('value')
+		// alert(num)
+		num= Number(num)+1
+		// alert(num)
+		$("#tt").attr('value',num)
+
+    })
+	$("#res").click(function () {
+        var num = $("#tt").attr('value')
+		// alert(num)
+		if (num >0){
+        	num= Number(num)-1
+		// alert(num)
+			$("#tt").attr('value',num)
+		}
+
+    })
+
+	$("#adcat").click(
+		function () {
+			$.get('../mycat/',{
+				'goodsid':$(this).attr('goodsid'),
+				'goodsnum':$('#tt').attr('value')
+				},
+				function (response) {
+					alert('添加购物车成功,请到购物车查看')
+                }
+
+			)
+        }
+	)
+
+})
+

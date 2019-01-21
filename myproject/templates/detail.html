@@ -18,10 +18,18 @@
 		<div id="top">
 			<div id="register">
 				<div class="center">
-					<ul id="list1">
-						<li><a href="register.html">登录</a></li>
-						<li><a href="login.html">注册</a></li>
-					</ul>
+					 {% if user %}
+                        <ul id="list1">
+
+                            <li><a>用户：{{ user.username}}</a></li>
+                            <li><a href="{% url 'mt:logout' %}">退出</a></li>
+                        </ul>
+                    {% else %}
+                        <ul id="list1">
+                            <li><a href="{% url 'mt:register' %}">登录</a></li>
+                            <li><a href="{% url 'mt:login' %}">注册</a></li>
+                        </ul>
+                    {% endif %}
 					<ul id="list2">
 						<li class="da"><a style="padding-left: 20px;" href="#">我的七加二<span><img src="{% static 'images/index_images/register/down-arrow.png'%}"></span></a>
 							<ul style="padding-left: 20px;">
@@ -31,7 +39,11 @@
 								<li><a href="#">我是卖家<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
 							</ul>
 						</li>
-						<li><a href="mycat.html"><span><img class="ol" src="{% static 'images/index_images/register/cart.png'%}"></span>购物车  <i id="sum">0</i></a></li>
+						<li><a href="{% url 'mt:mycat' %}"><span><img class="ol" src="{% static 'images/index_images/register/cart.png'%}"></span>购物车  <i id="sum">0</i></a></li>
+
+
+
+
 						<li class="da"><a href="#"><span><img class="ol" src="{% static 'images/index_images/register/star.png'%}"></span>收藏夹<span><img src="{% static 'images/index_images/register/down-arrow.png'%}"></span></a>
 							<ul id="list3">
 								<li><a href="#">收藏宝贝<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
@@ -796,7 +808,7 @@
 
 				<div class="nav_right">
 					<ul class="lit1">
-						<li><a href="index.html">首页</a></li>
+						<li><a href="{% url 'mt:index' %}">首页</a></li>
 						<li><a href="#">特卖会</a></li>
 						<li><a href="#">团购</a></li>
 						<li><a href="#">yes!好货</a>
@@ -815,9 +827,11 @@
 		<div id="introduce">
 			<div class="center">
 				<h1>首页 ›男装 ›速干衣裤 ›速干衣 ›UTO(悠途) ›<span id="nam1"></span></h1>
+
+
 				<div id="box">
 					<div id="middleImg">
-						<img src="{% static ''%}" id="img1">
+						<img src="{% static goods.img1%}" id="img1">
 						<div id="middleArea"></div>
 					</div>
 					<div id="small">
@@ -829,27 +843,27 @@
 						</div>
 						<div id="small_ob">
 							<ul id="aul">
-							<li><img src="{% static ''%}" id="img2"></li>
-							<li><img src="{% static ''%}" id="img3"></li>
-							<li><img src="{% static ''%}" id="img4"></li>
-							<li><img src="{% static ''%}" id="img5"></li>
-							<li><img src="{% static ''%}" id="img6"></li>
-							<li><img src="{% static ''%}" id="img7"></li>
-
+							<li><img src="{% static goods.img2%}" id="img2"></li>
+							<li><img src="{% static goods.img3%}" id="img3"></li>
+							<li><img src="{% static goods.img4%}" id="img4"></li>
+							<li><img src="{% static goods.img5%}" id="img5"></li>
 							</ul>
 						</div>
 
 					</div>
+
 					<div id="bigArea">
 						<img id="bigImg" src="{% static ''%}">
 					</div>
+
+
 					<div id="rollArea">
 						<h2 id="nam5"></h2>
 						<p>购物返积分 <span id="nam2"> </span>起|点评送积分<span id="nam3"></span>| 商品评论 <span>0 </span></p>
 						<div class="tuanit-l"></div>
 						<div class="tuanit-r"></div>
 						<div id="sall">
-							<p>会员价：<span id="nam4"></span></p>
+							<p>会员价：<span id="nam4">￥{{ goods.money}}</span></p>
 							<dl>
 								<dt>商品评价</dt>
 								<dd>0</dd>
@@ -878,18 +892,25 @@
 							</select>
 							免运费由 <a href="#">上海悠途实业有限公司</a> 销售和发货
 						</div>
+
+
+
+
 						<div class="num">
-							<i>购买数量：</i><input id="res" type="button" value="-"><input type="text" value="1" id="tt"><input id="add" type="button" value="+">库存100件<span></span>
+							<i>购买数量：</i><input id="res" type="button" value="-"><input type="text" value="1" id="tt"><input id="add" type="button" goosid="{{ goods.id }}" value="+">库存100件<span></span>
 						</div>
+
+
+
+
+
 						<div id="buy">
-							<div id="buy_b">
-
-							</div>
-							<div id="adcat">
-
-							</div>
-							<span></span>
+                            <div id="buy_b"></div>
+							<div id="adcat" goodsid="{{ goods.id }}"></div>
 						</div>
+
+
+
 						<div id="uto">
 							<img src="{% static 'images/detail_images/uto.jpg'%}">
 						</div>
@@ -968,16 +989,15 @@
 							<li>商品评论 (0)</li>
 							<li>产品咨询</li>
 						</ul>
-
 						<div class="ap">
-							<img src="{% static ''%}" id="img8">
+							<img src="{% static goods.img6%}" id="img8">
 						</div>
 						<div class="ap"><img src="{% static 'images/detail_images/pic1-1.png'%}"></div>
 						<div class="ap"><img src="{% static 'images/detail_images/pic-3.png'%}"></div>
 					</div>
 
 					<div id="doll_b">
-						<img src="{% static ''%}" id="img9" class="ad">
+						<img src="{% static goods.img7%}" id="img9" class="ad">
 						<img src="{% static 'images/detail_images/pic1-2.png'%}" class="ad">
 						<img src="{% static 'images/detail_images/cm.gif'%}" class="ad">
 					</div>

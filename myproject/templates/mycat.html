@@ -16,15 +16,20 @@
 		<div id="register">
 			<div class="center">
 				<ul id="list1">
-					<li><a href="index.html">七加二商城</a></li>
+					<li><a href="{% url 'mt:index' %}">七加二商城</a></li>
 					<li class="kuan"><a href="#"> 装备酷</a></li>
 					<li class="kuan"><a href="#"> 相伴</a></li>
 					<li class="kuan"><a href="#">移动端</a></li>
 				</ul>
 				<ul id="list2">
 					<li>您好,欢迎来到七加二商城！</li>
-					<li><a href="register.html">[登录]</a></li>
-					<li><a href="login.html">[注册]</a></li><a href="login.html">
+                    {% if user %}
+                        <li><a>[用户：{{ user.username }}]</a></li>
+                        <li><a href="{% url 'mt:logout' %}">退出</a></li>
+                    {% else %}
+                        <li><a href="{% url 'mt:register' %}">[登录]</a></li><a href="login.html">
+                        <li><a href="{% url 'mt:login' %}">[注册]</a></li><a href="login.html">
+                    {% endif %}
 					</a><li class="qq"><a href="login.html"></a><a href="#"></a></li>
 					<li class="weibo"><a href="#"></a></li>
 					<li class="kuan"><a href="#">我的订单</a></li>
@@ -69,18 +74,23 @@
 				</div>
 				<div id="mycat_c">
 					<ul id="mycat_ul">
-						<!--<li>
-							<input checked="checked" type="checkbox" id="ipt"/><img src="../images/mycat_images/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy83MjA2OC8yMDE3MDkxOS8yMDE3MDkxOTEwMzY0NjEyMjYuanBlZw==.auto.jpeg"/>
-							<span id="boom1">uto悠途秋冬长袖健身服男速干夜跑时尚外套女户外运动防风跑步衣【男】黑灰色 M（中）</span>
-							<span id="boom2">￥299.00</span>
-							<input type="button" value="-" id="ipt1" />
-							<input type="text"  value="1" id="ipt2"/>
-							<input type="button"  value="+"id="ipt3" />
+                        {% for car in shopcar %}
+                        <li>
+							<input checked="checked" type="checkbox" id="ipt"/><img src="{% static car.goods.img2 %}"/>
+							<span id="boom1">{{ car.goods.name }}</span>
+							<span id="boom2">￥{{ car.goods.money }}</span>
 
-							<span id="boom3">￥299.00</span>
+							<input type="text"  value="{{ car.number }}" id="ipt2"/>
+
+
+							<span id="boom3">￥{{ Sum }}</span>
 							<a href="#" id="boom4">删除</a>
-						</li>-->
+						</li>
+                    {% endfor %}
 					</ul>
+
+
+
 
 				</div>
 				<div id="mycat_b">

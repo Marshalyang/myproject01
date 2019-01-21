@@ -1,3 +1,4 @@
+#coding=utf-8
 """
 Django settings for myproject project.
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'atxz(6_i6xksyf+a+hlp3pannge7fe7rl33v1%)37_g4+qoxmb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

@@ -31,10 +31,20 @@
 			</div>
 			<div id="register">
 				<div class="center">
-					<ul id="list1">
-						<li><a href="{% url 'mt:register' %}">登录</a></li>
-						<li><a href="{% url 'mt:login' %}">注册</a></li>
-					</ul>
+
+                    {% if user %}
+                        <ul id="list1">
+
+                            <li><a>用户：{{ user.username}}</a></li>
+                            <li><a href="{% url 'mt:logout' %}">退出</a></li>
+                        </ul>
+                    {% else %}
+                        <ul id="list1">
+                            <li><a href="{% url 'mt:register' %}">登录</a></li>
+                            <li><a href="{% url 'mt:login' %}">注册</a></li>
+                        </ul>
+                    {% endif %}
+
 					<ul id="list2">
 						<li class="da"><a style="padding-left: 20px;" href="#">我的七加二<span><img src="{% static 'images/index_images/register/down-arrow.png'%}"></span></a>
 							<ul style="padding-left: 20px;">
@@ -44,7 +54,7 @@
 								<li><a href="#">我是卖家<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
 							</ul>
 						</li>
-						<li><a href="mycat.html"><span><img class="ol" src="{% static 'images/index_images/register/cart.png'%}"></span>购物车  0</a></li>
+						<li><a href="{% url 'mt:mycat' %}"><span><img class="ol" src="{% static 'images/index_images/register/cart.png'%}"></span>购物车  0</a></li>
 						<li class="da"><a href="#"><span><img class="ol" src="{% static 'images/index_images/register/star.png'%}"></span>收藏夹<span><img src="{% static 'images/index_images/register/down-arrow.png'%}"></span></a>
 							<ul id="list3">
 								<li><a href="#">收藏宝贝<span><img src="{% static 'images/index_images/register/right.png'%}"></span></a></li>
@@ -1212,6 +1222,8 @@
 				</div>
 				<div id="onef_room_center">
 					<ul id="hand2">
+
+
 						<li><img src="{% static 'images/index_images/f_room_center/L2VjbW1lL2x2eW91bWFsbC9tYWxsL3dpZGdldC8yMDE3MDkyOC8yMDE3MDkyODEwMjkzNjkyNzMuanBn.auto.jpg'%}"></li>
 						<li><img src="{% static 'images/index_images/f_room_center/L2VjbW1lL2x2eW91bWFsbC9tYWxsL3dpZGdldC8yMDE3MDkyOC8yMDE3MDkyODEwMjkzNjY0ODMuanBn.auto.jpg'%}"></li>
 						<li><img src="{% static 'images/index_images/f_room_center/L2VjbW1lL2x2eW91bWFsbC9tYWxsL3dpZGdldC8yMDE3MDkyOC8yMDE3MDkyODEwMjkzNjYzMTAuanBn.auto.jpg'%}"></li>
@@ -1226,10 +1238,12 @@
 				<div id="onef_room_right">
 
 					<ul id="dnf">
-						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82ODg1OS8yMDE3MDYwNS8yMDE3MDYwNTE0MjM0ODU0NTQuanBn.auto.jpg' %}"/></a>
-							<p><a href="#">UTO长裤运动装</a></p>
+						<li><a href="{% url 'mt:detail' shopshows.1.id%}"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82ODg1OS8yMDE3MDYwNS8yMDE3MDYwNTE0MjM0ODU0NTQuanBn.auto.jpg' %}"/></a>
+							<p><a href="{% url 'mt:detail' shopshows.1.id %}">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
 						</li>
+
+
 						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy82ODkzNC8yMDE3MDMwNy8yMDE3MDMwNzA5NDUxMTc3NDguanBn.auto.jpg' %}"/></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
@@ -1318,11 +1332,21 @@
 						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy83MTc0NS8yMDE3MDkyNi8yMDE3MDkyNjEwMTA1NzM4NDkuanBn.auto.jpg'%}"></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
+
+
+
+
 						</li>
-						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy83MjExMC8yMDE3MDkyNi8yMDE3MDkyNjEwMjUzMDY3NTIuanBn.auto.jpg'%}"></a>
-							<p><a href="#">UTO长裤运动装</a></p>
+						<li><a href="{% url 'mt:detail' shopshows.0.id%}"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy83MjExMC8yMDE3MDkyNi8yMDE3MDkyNjEwMjUzMDY3NTIuanBn.auto.jpg'%}"></a>
+							<p><a href="{% url 'mt:detail' shopshows.0.id%}">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>
 						</li>
+
+
+
+
+
+
 						<li><a href="#"><img src="{% static 'images/index_images/all_f/L2VjbW1lL2x2eW91bWFsbC9nb29kcy9nb29kcy83MjAyNi8yMDE3MDkyNi8yMDE3MDkyNjEwMTgyMjIxMjQuanBn.auto.jpg'%}"></a>
 							<p><a href="#">UTO长裤运动装</a></p>
 							<h5>￥200.00</h5>

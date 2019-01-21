@@ -21,6 +21,10 @@ $(function(){
 		}
 		})
 	}*/
+
+
+
+
 	$(".sub").on("click",function(){
 		if(!($("#txt input").val())){
 			$("#txt i").css("display","block");
@@ -190,7 +194,7 @@ $(function(){
 						//json解析
 						//如果登录成功直接进入首页
 						//如果失败则弹出提示信息
-						location.href = "register.html";
+						location.href = "index.html";
 					}
 					else{
 						$("#ckbox i").css("display","block");
